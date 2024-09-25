@@ -11,6 +11,23 @@ Noms et matricules : Nom1 (Matricule1), Nom2 (Matricule2)
 ########################################################################################################## 
 
 # TODO : Écrire votre code ici
+import csv
+
+
+csvfile = open('//Users//kaydon//Desktop//INF1007//2024A-TP02-Enonce//collection_bibliotheque.csv', newline='')
+bibliothèque={}
+
+c = csv.DictReader(csvfile)
+
+
+for row in c:
+    bibliothèque[row["cote_rangement"]]= row['auteur'], row["titre"] , row ["date_publication"]
+    print(f' \n Bibliotheque initiale : {bibliothèque} \n')
+
+
+ 
+
+
 
 
 
